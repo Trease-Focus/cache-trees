@@ -8,6 +8,10 @@ on:
   # Allow manual trigger
   workflow_dispatch:
   
+  # Triggered by another repository (trease-backend)
+  repository_dispatch:
+    types: [trigger-cache-generation]
+  
   # Also run on push to main branch
   push:
     branches:
