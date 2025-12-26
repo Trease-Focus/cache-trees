@@ -62,6 +62,10 @@ jobs:
         working-directory: trease-backend
         run: bun run cache-gen/generate_video_cache.ts
       
+      - name: Generate Data Cache
+        working-directory: trease-backend
+        run: bun run cache-gen/generate_entity_data.ts
+      
       - name: Prepare output for GitHub Pages
         run: |
           mkdir -p _site
