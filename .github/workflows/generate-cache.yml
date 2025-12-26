@@ -59,7 +59,7 @@ jobs:
           mkdir -p _site
           # Copy generated cache files to _site directory
           # Adjust this path based on where the script outputs files
-          cp -r trease-backend/cache-gen/cache/* _site/ 2>/dev/null 
+          cp -r trease-backend/cache/* _site/ 2>/dev/null 
           # Create an index.html if one doesn't exist
           if [ ! -f _site/index.html ]; then
             echo '<!DOCTYPE html><html><head><title>Image Cache</title></head><body><h1>Image Cache Generated</h1><p>Last updated: '"$(date -u)"'</p></body></html>' > _site/index.html
